@@ -38,7 +38,10 @@
 						<div class="item">
 							<div class="active text-center">
 								<figure>
-									<img class="detailImage" src="{{product.img}}" alt="user">
+									<img class="detailImageBC" ng-if="product.category =='Clothing' || product.category == 'Books'" src="{{product.img}}" alt="user">
+									<img class="detailImage" ng-if="product.category =='Electronics'" src="{{product.img}}" alt="user">
+									<img class="detailImageHC" ng-if="product.category == 'Home & Decor'" src="{{product.img}}" alt="user">
+
 								</figure>
 							</div>
 						</div>

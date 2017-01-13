@@ -92,8 +92,8 @@
                                 <tr ng-repeat="product in productListNew">
                                     <td>{{product.title}}</td>
                                     <td class="text-center">Rs. {{product.price}}</td>
-                                    <td class="text-center">1</td>
-                                    <td class="text-right">Rs. {{product.price}}</td>
+                                    <td class="text-center">{{product.itemquant}}</td>
+                                    <td class="text-right">Rs. {{product.price*product.itemquant}}</td>
                                 </tr>
                                 <tr>
                                     <td class="emptyrow"><i class="fa fa-barcode iconbig"></i></td>

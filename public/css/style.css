@@ -871,7 +871,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .product-carousel {
-  margin-bottom: 7em;
+  margin-bottom: 3em;
 }
 
 .fh5co-tabs .fh5co-tab-nav {
@@ -1689,9 +1689,15 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 img.detailImage {
-  width: 25%;
+  width: 70%;
 }
 
+img.detailImageBC {
+  width: 40%;
+}
+img.detailImageHC {
+  width: 55%;
+}
 .fh5co-tab-content-wrap.section-top {
     top: -22px !important;
 }

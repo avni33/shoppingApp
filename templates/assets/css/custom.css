@@ -190,7 +190,7 @@ a:hover {
 .popbtn{
 	background-color: #e6edf3;
 	margin-left: 25px;
-	height: 63px;
+	height: 121px !important;
 	width: 40px;
 	padding: 32px 0 0 14px !important;
 	float: right;
@@ -206,7 +206,7 @@ a:hover {
 }
 
 .price{
-	color: #f06953;
+	color: #428bca;
 	font-size :18px;
 	font-weight: bold;
 	float: right;
@@ -447,4 +447,8 @@ a:hover {
 	/* Just looks nicer */
 	.credit-card-box .panel-heading img {
 	    min-width: 180px;
+	}
+
+	img.cartImage {
+	    width: 45%;
 	}

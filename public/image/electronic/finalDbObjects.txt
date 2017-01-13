@@ -1,0 +1,188 @@
+BOOKS-------------------------------------------------------------------
+
+{"title" : "A Walk To Remember", "description" :"The story is from the perspective of a 17-year-old high school senior boy named Landon Carter. The hero Landon, was looking for a girl who can be his partner for prom night. Finally he found a girl named Jamie, though he was pretty upset about it, as the girl believed in religion extensively and took bible everywhere she went. But at the end of the night, he acknowledged that it was the best date he had ever had.Jamie takes their friendship ahead by asking Landon to perform in their school's production with her. Here also he was not ready to go and not very enthusiastic about it but he joined to spend some time with her. He finds that she helps out at the orphanage and finds himself wanting to help out too. After the victory of their school production, he understands that he is in love with her. Will he admit his love to her? If he does, will she be agreed with him?", "img" : "/image/books/image1.jpg", "category" : "Books", "Quantity" : 25, "price" : 157}
+
+
+
+
+
+{"title" : "And Then She Was Gone", "description" :"A hometown hero with a heart of gold, Jack Stratton was raised in a whorehouse by his prostitute mother. Jack seemed destined to become another statistic, but now his life has taken a turn for the better. Determined to escape his past, he's headed for a career in law enforcement. When his foster mother asks him to look into the girl’s disappearance, Jack quickly gets drawn into a baffling mystery. As Jack digs deeper, everyone becomes a suspect—including himself. Caught between the criminals and the cops, can Jack discover the truth in time to save the girl? Or will he become the next victim?", "img" : "/image/books/image2.jpg", "category" : "Books", "Quantity" : 35, "price" : 900}
+
+
+
+
+
+{"title" : "Indian Economy", "description" :"Indian Economy is a comprehensive text, with detailed coverage of all topics in the UPSC Preliminary and Main syllabus. Written by a subject expert who has several books on economics, contemporary essays etc. to his credit, the book is of immense importance to academics, researchers, aspirants of civil services examinations and those with an abiding passion for the subject. The book is recommended by UPSC in its reading list. The book is a stellar product, with many years of bestselling performance.", "img" : "/image/books/image3.jpg", "category" : "Books", "Quantity" : 15, "price" : 435}
+
+
+
+
+
+
+
+
+
+{"title" : "Shadow Princess", "description" :"The Mughal Empire has always held a fascination for English writers who have written novels based on the history of India. The rich display of pomp, splendour and luxury, the internal conflicts and fratricide, the intrigues and plottings among family members have all made for great stories. These elements have existed in all kingdoms and empires, but with the Mughals, they were very obvious and open.In Shadow Princess (Paperback), Indu Sundaresan paints a similar picture of the Mughals, but what sets her apart from other writers is that she mainly concentrates on the powerful females of the dynasty. Although they were not as visible as the men, they still wielded power from behind the scenes and influenced the destinies of the empire.", "img" : "/image/books/image4.jpeg", "category" : "Books", "Quantity" : 10, "price" : 257}
+
+
+
+
+{"title" : "A Thousand Splendid Suns", "description" :"Mariam is only fifteen when she is sent to Kabul to marry Rasheed. Nearly two decades later, a friendship grows between Mariam and a local teenager, Laila, as strong as the ties between mother and daughter. When the Taliban take over, life becomes a desperate struggle against starvation, brutality and fear. Yet love can move a person to act in unexpected ways, and lead them to overcome the most daunting obstacles with a startling heroism.", "img" : "/image/books/image5.jpeg", "category" : "Books", "Quantity" : 18, "price" : 159}
+
+
+
+
+
+
+{"title" : "Turning Point", "description" :"This book, Turning Points: A Journey Through Challenges, takes up the story from when A.P.J Abdul Kalam became the President of India. It covers his acceptance of the post of the President of India, his term in office, his efforts to make his term meaningful, and the challenges he faced.His term from 2002 to 2007 was an eventful one. The President of India is just a titular head with minimal powers. But, the office is one of great influence and Kalam used it to best effect. He got the government and the public to focus on issues that were relevant to the country's all round growth.He initiated programs like PURA to try and integrate rural areas into the general economic and technological growth of the country. He dreamt of taking the whole of India on his vision for the country in the new millennium, and he saw no reason why the villages should be left out in this vision.", "img" : "/image/books/image6.jpeg", "category" : "Books", "Quantity" : 32, "price" : 148}
+
+
+
+
+
+{"title" : "Into the Wild", "description" :"Chris, an intelligent young man who graduated with high grades, came from a wealthy and loving family. He was intelligent and graduated with double grades. However, this did not stop him from leaving everything behind and trekking into the wilderness where he could find a way to be close to nature. He was in search of something more deep and elusive in life. He had a yearning to explore and live a simple life. It was in the year of 1992 that he decided to give away his savings and start life anew and experience life in its simplest form. His family searched for him, but he had erased all tracks. Four months later they found his body in an abandoned bus. It was found by a moose hunter in a remote corner of the Denali National Park and Preserve, Alaska. Jon Krakauer, the author of this book, wrote an article about Chris in the year 1993 for the Outside magazine. The reactions to the young man’s story were different. Some said that he was foolish and got what he deserved while others were in awe of his courage to go out and find meaning to his life.", "img" : "/image/books/image7.jpeg", "category" : "Books", "Quantity" : 28, "price" : 245}
+
+
+
+
+
+
+{"title" : "Rich Dad Poor Dad", "description" :"In the book Rich Dad Poor Dad: What The Rich Teach Their Kids About Money That the Poor and Middle Class Do Not! Robert Kiyosaki advocates financial independence through owning businesses, investing, and real estate. He also talks about increasing one's financial intelligence.What makes somebody rich? Is it hard work that matters the most? Or does one need to make the right financial decisions at the right time to be rich? This book answers these questions with the help of six easy to apprehend learn lessons. Written in the style of a set of parables, it is based on the real life of the author. Robert Kiyosaki takes the reader to his own childhood that he spent in Hawaii.He promotes the philosophy of wealth creation and emphasizes on purchasing income generating assets. To prove his point, he offers real life examples and relates his own story in which he had two people who influenced him the most. One was his real father – an educator who worked hard to make money, and the other was his father’s best friend – a real estate tycoon who is the Rich Dad of the book and is extremely successful.  His biological father, the Poor Dad of the story, bought consumer goods for his family’s satisfaction and had to remain financially dependent for his entire life. The Rich dad, on the other hand, used his money to create more money-making assets. And this is the attitude that the author highlights throughout the book and says is the basic difference between the poor and the rich.He values the ownership of high value assets more than being just an ordinary employee. He provides a new look at an old financial mindset. This book claims to teach people how to become rich without requiring a high income and take control of one’s financial future.", "img" : "/image/books/image8.jpeg", "category" : "Books", "Quantity" : 27, "price" : 199}
+
+
+
+
+
+{"title" : "The Monk Who Sold His Ferrari", "description" :"A renowned inspirational fiction, The Monk Who Sold His Ferrari is a revealing story that offers the readers a simple yet profound way to live life. The plot of this story revolves around Julian Mantle, a lawyer who has made his fortune and name in the profession. A sudden heart-attack creates havoc in the successful lawyer’s life. Jolted by the sudden onset of the illness, his practice comes to a standstill. He ponders over material success being worth it all, renounces all of it and leaves for India. ", "img" : "/image/books/image9.jpg", "category" : "Books", "Quantity" : 30, "price" : 99}
+
+
+
+
+
+{"title" : "The Kite Runner", "description" :"Amir is the son of a wealthy Kabul merchant, a member of the ruling caste of Pashtuns. Hassan, his servant and constant companion, is a Hazara, a despised and impoverished caste. Their uncommon bond is torn by Amir's choice to abandon his friend amidst the increasing ethnic, religious, and political tensions of the dying years of the Afghan monarchy, wrenching them far apart. But so strong is the bond between the two boys that Amir journeys back to a distant world, to try to right past wrongs against the only true friend he ever had. The unforgettable, heartbreaking story of the unlikely friendship between a wealthy boy and the son of his father’s servant, The Kite Runner is a beautifully crafted novel set in a country that is in the process of being destroyed. It is about the power of reading, the price of betrayal, and the possibility of redemption; and an exploration of the power of fathers over sons—their love, their sacrifices, their lies. A sweeping story of family, love, and friendship told against the devastating backdrop of the history of Afghanistan over the last thirty years, The Kite Runner is an unusual and powerful novel that has become a beloved, one-of-a-kind classic.", "img" : "/image/books/image10.jpg", "category" : "Books", "Quantity" : 40, "price" : 179}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Clothing--------------------------------------------------------------------------------------------------
+
+
+
+
+
+{"title" : "Leena Dress", "description" :"Lined,Sleeveless,Cut-out at sides with material Sequin, Polyester having regular fit and length 31.5", 80 cm (Size XS).", "img" : "/image/clothing/image1.jpg", "category" : "Clothing", "Quantity" : 11, "price" : 1519}
+
+
+
+
+{"title" : "Mellan Dress", "description" :"The amazing Mellan shift dress fits so snugly around the voluptuous curves of your body; it looks like your second skin. The go-sleeveless campaign is what all dreams are made of with the strap style design and a button up front to make dressing up look effortless and chic! Be it a cocktail party with you as the host or a board meeting, own everything you start with the confidence booster clothes! A big hit with women around the nation, dresses that make headlines presented to you!", "img" : "/image/clothing/image2.jpg", "category" : "Clothing", "Quantity" : 23, "price" : 1579}
+
+
+
+{"title" : "Mustard Wicker Top", "description" :"Unlined,Full sleeve, Overlap at back.material used Polyester having regular fit and length 22.4", 57 cm (Size XS).", "img" : "/image/clothing/image3.jpg", "category" : "Clothing", "Quantity" : 18, "price" : 1079}
+
+
+
+{"title" : "Jezebels Top", "description" :"The Jezebels Top makes a strong case for itself with its enticing black color. This top is a casual wear item. It will make you create a strong impression on dates and other outings. It comes with an impeccably tailored Peter Pan collar in sequin. There is a key hole at the back as well. There is a button at the back and this is unlined. This top is also full sleeved and comes in a regular fit avatar. The use of the best polyester guarantees unmatched quality. You can pair this top with a complementary pair of trousers for several occasions. Throw on a pair of sandals for a smart look. Who knows, you might earn the moniker Smarty Pants next!", "img" : "/image/clothing/image4.jpg", "category" : "Clothing", "Quantity" : 44, "price" : 1219}
+
+
+
+{"title" : "U.S. Polo Assn.", "description" :"Fall in love with the soft texture wearing this green coloured polo T-shirt by U.S. Polo Assn. Your skin will love the feel of this slim-fit T-shirt as it is fashioned using the material that is famous for comfort – cotton. Team this T-shirt with distressed jeans and leather sandals for a relaxed and cool look.", "img" : "/image/clothing/image5.jpg", "category" : "Clothing", "Quantity" : 50, "price" : 1050}
+
+
+
+{"title" : "Allen Solly Black Jacket ", "description" :"Keep it simple yet stylish by wearing this aqua blue coloured shirt for men from Tommy Hilfiger. Made from cotton, this geometric print shirt makes a convenient casual wear. Style this shirt with jeans, jacket and casual shoes.", "img" : "/image/clothing/image6.jpg", "category" : "Clothing", "Quantity" : 54, "price" : 4095}
+
+
+
+
+{"title" : "Mr Button Blazer", "description" :"Look effortlessly stylish wearing this navy blue coloured blazer from the house of Mr Button. Made of terry rayon, this blazer for men is super comfortable to wear all day long. Featuring slim fit, this blazer will be a great addition to your wardrobe.", "img" : "/image/clothing/image7.jpg", "category" : "Clothing", "Quantity" : 32, "price" : 8999}
+
+
+
+
+{"title" : "Beebay Fit and Flare Dress", "description" :"Fabric used Cotton and color is dark blue. Type is Fit and Flare Dress. Midi/Knee Length Dress", "img" : "/image/clothing/image8.jpg", "category" : "Clothing", "Quantity" : 25, "price" : 783}
+
+
+
+
+{"title" : "FTC Bazar Layered Dress", "description" :"Fabric used is Net,color is red. type is Layered. Midi/Knee Length Dress", "img" : "/image/clothing/image9.jpeg", "category" : "Clothing", "Quantity" : 10, "price" : 399}
+
+
+
+
+{"title" : "Vastramay Boys Ethnic Set", "description" :"Ideal For Boys Pattern: Self Design, Embroidered, Embellished Full Sleeve Kurta and Pyjama Set", "img" : "/image/clothing/image10.jpeg", "category" : "Clothing", "Quantity" : 10, "price" : 523}
+
+
+
+
+{"title" : "Aedi Boys Maroon Shirt", "description" :"Let your junior enjoy comfort and the attention too in this Red coloured casual shirt from ANRY. Made from 100% cotton, this lightweight and ultra-comfy casual shirt will make him look even more adorable.", "img" : "/image/clothing/image11.jpeg", "category" : "Clothing", "Quantity" : 12, "price" : 519}
+
+
+
+
+
+
+
+
+
+Electronics -------------------------------------------------------------------------------------------------
+
+
+{"title" : "Apple iPhone 7", "description" :"Take your iPhone experience to the next level with iPhone 7. Featuring new camera systems, a better battery-life, an efficient processor and powerful stereo speakers, this smartphone will drastically enhance your iPhone experience. With a sharp and vibrant display, and a sleek water-resistant body, this phone is as powerful as it is attractive.", "img" : "/image/electronic/image1.jpg", "category" : "Electronics", "Quantity" : 12, "price" : 64810}
+
+
+
+
+
+{"title" : "Samsung LED TV ", "description" :"If you are looking for an LED TV that offers audio and visual delight then you can choose the Samsung FH4003 HD Ready LED TV. This TV is designed with slim dimensions of 9.3 x 73.8 x 44.2 cm and a black bezel that gives it an attractive and sleek look. With 32 inches screen and 1366 x 768 pixels resolution, it gives you a bright and vibrant picture display. It is engineered with HyperReal Engine technology which enhances the video display. So enjoy your favourite TV series or movie with unique visual experience.", "img" : "/image/electronic/image2.jpg", "category" : "Electronics", "Quantity" : 20, "price" : 18990}
+
+
+
+
+{"title" : "Apple Macbook Pro", "description" :"The Apple Macbook Pro has a design that can only come from the artists at apple. The lightweight grey-white shiny finish with a simplistic apple logo is something that will turn heads wherever you go. The design uses lightweight but strong aluminium to make sure that your system weighs only 1.35kg to ensure that you have amazing performance without the need to suffer a heavy bag.", "img" : "/image/electronic/image3.jpg", "category" : "Electronics", "Quantity" : 16, "price" : 49399}
+
+
+
+
+{"title" : "Canon DSLR", "description" :"If you are interested in photography and want to take it one step further, the Canon EOS 700D is the perfect DSLR camera for your needs. Featuring easy to use functionality with professional level image quality, the 700D delivers superb performance in an affordable package. Shoot detailed images or high definition video with equal ease and take advantage of the large range of lenses available for Canon cameras.", "img" : "/image/electronic/image4.jpg", "category" : "Electronics", "Quantity" : 19, "price" : 36249}
+
+
+
+
+{"title" : "Apple EarPods", "description" :"Unique headphones designed to fit perfectly in the ear Seamless sound quality, noise cancellation and in-ear headphone", "img" : "/image/electronic/image5.jpg", "category" : "Electronics", "Quantity" : 12, "price" : 2295}
+
+
+
+
+
+{"title" : "Q Acoustics", "description" :"Perfect for every occasion, the new 3000 Series 5.1 Cinema Pack will unleash the full potential of your home cinema electronics.Perfect for every occasion, the new 3000 Series 5.1 Cinema Pack will unleash the full potential of your home cinema electronics.Its exquisitely detailed sound will convey all the atmosphere, natural dialogue and, when required, the full bodied explosive drama of every movie soundtrack.But of course, being Q Acoustics loudspeakers, they don't just deliver fantastic home cinema sound. Every new 3000 Series model is also an outstanding, genuine hi-fi loudspeaker. So the 3000 home cinema pack is also your best choice if you want to enjoy wonderful stereo musical performances.", "img" : "/image/electronic/image6.jpg", "category" : "Electronics", "Quantity" : 12, "price" : 99500}
+
+
+
+
+{"title" : "Motorola - Moto 360", "description" :"Moto 360 is a modern timepiece powered by Android Wear. Comfortable, familiar, and crafted with the finest materials, Moto 360 keeps you up to date without taking you away from the moment. Glance at your wrist to see updates or just speak to get the info you need. Because it's time a watch told you more than just the time. What's Included: Motorola Moto 360 Smart Watch for Android Devices 4.3 or Higher Wireless charging dock Wall charger Quick-start guide", "img" : "/image/electronic/image7.jpg", "category" : "Electronics", "Quantity" : 12, "price" : 32828}
+
+
+
+
+{"title" : "LG HD LED TV", "description" :"The thickness of the screen can be innovatively reduced because it has no backlight. It is extremely thin which makes it possible to attach it to the wall more closely. This screen can perfectly match with home décor due to its cutting edge technology.", "img" : "/image/electronic/image8.jpg", "category" : "Electronics", "Quantity" : 12, "price" : 429900}
+
+
+
+
+{"title" : "Bosch Fully-auto Washing Machine", "description" :"Capacity is 8 kg Consumption of energy 0.98 kwh water 55 liters Maximum Spin Speed is 1200 rpm Noise level washing is 49 dB Noise level spinning speed 74 dB", "img" : "/image/electronic/image9.jpg", "category" : "Electronics", "Quantity" : 12, "price" : 40049}
+
+
+
+
+{"title" : "IFB  Microwave Oven", "description" :"Cook with convenience and without a hassle with the IFB 25BCSDD1 Convection Microwave with a drop down door. Enjoy healthy, oil free cooking with special features for Fermentation, Weight Defrost, Standard Menus, Keep Warm and Heater Selection option. What's more, it comes with a 3-year warranty on Magnetron and Cavity.", "img" : "/image/electronic/image10.jpg", "category" : "Electronics", "Quantity" : 12, "price" : 13899}

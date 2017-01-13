@@ -44,6 +44,11 @@
 						<span>Price</span>
 					</li>
 					<li class="row" ng-repeat = "product in productListNew">
+					<span class="quantity">	<div class="btn-group" ng-init="product.itemquant = 1">
+                         <button type="button" class="btn btn-info" ng-disabled="product.itemquant == 1" ng-click="cartItemCount(product, -1)">-</button>
+                        <button type="button" class="btn btn-info" name="quantity" ng-model="quantity">{{product.itemquant}}</button>
+                        <button type="button" class="btn btn-info"  ng-disabled="product.Quantity == product.itemquant || product.itemquant >= 5" ng-click="cartItemCount(product, 1)">+</button>
+											</div></span>
 						<!-- <span class="quantity">
 
 							<select ng-model="product[$index]" ng-change='change(product[$index])' value=1>
@@ -57,12 +62,17 @@
 					</span> -->
 
 						<span class="itemName">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{product.title}}</span>
-
-						<span class="popbtn"><a class="glyphicon glyphicon-remove" ng-click="remove(product)"></a></span>
+						<span class="popbtn" style="margin-left: 25px;
+    height: 63px;
+    width: 40px;
+    padding: 21px 0 0 8px !important;
+    float: right;
+    cursor: pointer;"><a class="glyphicon glyphicon-remove"
+							style="color: rgba(64, 51, 49, 0.57);font-size: 19px;" ng-click="remove(product)"></a></span>
 						<span class="price">Rs {{product.price}}</span>
 					</li>
 					<li ng-if="total==0" class="row">
-						<img src="images/emptycart.gif">
+						<img style="width:450px;" src="images/emptycart.gif">
 					</li>
 
 					<li class="row totals">

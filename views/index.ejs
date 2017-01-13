@@ -195,13 +195,28 @@ $rootScope.showSearch = false;
         $rootScope.showSearch = false;
         $rootScope.noOfProducts;
        $scope.total = localStorageService.get('total');
+
+       $scope.cartItemCount = function(product, incdecby) {
+         console.log($scope.quantity);
+                product.itemquant += incdecby;
+                if(incdecby >= 0) {
+                  $scope.total += product.price;
+                } else {
+                  $scope.total -= product.price;
+
+                }
+                localStorageService.set('total', $scope.total);
+                localStorageService.set('productListNew', $scope.productListNew);
+
+            }
+
        $scope.remove = function(product){
           angular.forEach($scope.productListNew, function(val, key) {
    if(angular.equals(product._id, val._id)){
               var index=$scope.productListNew.indexOf(val)
               $scope.productListNew.splice(index,1);
               $rootScope.noOfProducts = ($rootScope.noOfProducts)-1;
-              localStorageService.set('total', localStorageService.get('total')-product.price);
+              localStorageService.set('total', localStorageService.get('total')-(product.price*product.itemquant));
          localStorageService.set('productListNew', $scope.productListNew);
          $scope.total = localStorageService.get('total');
 
@@ -240,23 +255,14 @@ console.log(count);
 
        $scope.total = localStorageService.get('total');
        $scope.productListNew = localStorageService.get('productListNew');
+       localStorageService.set('productListNew', []);
+       localStorageService.set('total', 0);
+
 
 
      }])
 
-   
-     .controller('CatalogueController', ['$scope', 'Products', '$routeParams','localStorageService',function ($scope, Products, $routeParams,localStorageService) {
-                debugger;
-         console.log("Test ctrl");
-                $scope.products = []; 
-                $scope.products_insert= function(){
-                    alert(JSON.stringify($scope.products));
-                    Products.save($scope.products,function(val, key){
-                        
-                        //do something here
-                    });   
-                };
-        }])  
+
 
 
       .config(['$routeProvider', function ($routeProvider) {
@@ -280,11 +286,11 @@ console.log(count);
            .when('/billGeneration', {
              templateUrl: '/newBillTest.html',
              controller: 'BillCtrl'
-           })
-            .when('/catalogue', {
-             templateUrl: '/catalogue.html',
-             controller: 'CatalogueController'
            });
+          // .when('/bill_view/:id', {
+          //   templateUrl: '/bill.html',
+          //   controller: 'BillController'
+          // });
       }]);
 
 
