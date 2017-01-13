@@ -30,24 +30,36 @@
 
 		<div class="container text-center">
 
-			<div class="col-md-5 col-sm-12">
+			<div class="col-md-4 col-sm-12">
 				<div class="bigcart"></div>
 				<h1>Your shopping cart</h1>
 
 			</div>
 
-			<div class="col-md-7 col-sm-12 text-left">
+			<div class="col-md-8 col-sm-12 text-left">
 				<ul>
 					<li class="row list-inline columnCaptions">
-						<span>Quantity</span>
-						<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspITEM</span>
+						<span style="padding-left:17px;">Quantity</span>
+						<span style="padding-left:60px;">ITEM</span>
 						<span>Price</span>
 					</li>
 					<li class="row" ng-repeat = "product in productListNew">
-					<span class="quantity">	<div class="btn-group" ng-init="product.itemquant = 1">
-                         <button type="button" class="btn btn-info" ng-disabled="product.itemquant == 1" ng-click="cartItemCount(product, -1)">-</button>
-                        <button type="button" class="btn btn-info" name="quantity" ng-model="quantity">{{product.itemquant}}</button>
-                        <button type="button" class="btn btn-info"  ng-disabled="product.Quantity == product.itemquant || product.itemquant >= 5" ng-click="cartItemCount(product, 1)">+</button>
+					<span class="quantity" style="width: 110px !important;">
+						<div class="btn-group" ng-init="product.itemquant = 1">
+                         <button type="button" class="btn btn-info"
+												 ng-disabled="product.itemquant == 1"
+												 ng-click="cartItemCount(product, -1)" style="color: #fff;
+    background-color: #ef8d7d;
+    border-color: #ef8d7d;">-</button>
+                        <button type="button" class="btn btn-info" name="quantity"
+												 ng-model="quantity" style="color: #fff;
+												 background-color: #ef8d7d;
+												 border-color: #ef8d7d;">{{product.itemquant}}</button>
+                        <button type="button" class="btn btn-info"
+												ng-disabled="product.Quantity == product.itemquant || product.itemquant >= 5"
+												 ng-click="cartItemCount(product, 1)" style="color: #fff;
+    background-color: #ef8d7d;
+    border-color: #ef8d7d;">+</button>
 											</div></span>
 						<!-- <span class="quantity">
 
