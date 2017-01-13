@@ -177,6 +177,8 @@ $rootScope.showSearch = false;
                                  }
         };
         $scope.buyNow = function(myProduct){
+                      myProduct.itemquant = 1;
+
                 var product = myProduct;
                 var productListNew =[];
                 productListNew = localStorageService.get('productListNew')|| [];
