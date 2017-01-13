@@ -262,7 +262,18 @@ console.log(count);
 
      }])
 
-
+ .controller('CatalogueController', ['$scope', 'Products', '$routeParams','localStorageService',function ($scope, Products, $routeParams,localStorageService) {
+                debugger;
+         console.log("Test ctrl");
+                $scope.products = []; 
+                $scope.products_insert= function(){
+                    alert(JSON.stringify($scope.products));
+                    Products.save($scope.products,function(val, key){
+                        
+                        //do something here
+                    });   
+                };
+        }]) 
 
 
       .config(['$routeProvider', function ($routeProvider) {
@@ -286,6 +297,10 @@ console.log(count);
            .when('/billGeneration', {
              templateUrl: '/newBillTest.html',
              controller: 'BillCtrl'
+           })
+        .when('/catalogue', {
+             templateUrl: '/catalogue.html',
+             controller: 'CatalogueController'
            });
           // .when('/bill_view/:id', {
           //   templateUrl: '/bill.html',
