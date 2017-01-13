@@ -1,0 +1,111 @@
+
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                <a class="navbar-brand" href="#"><img src="/assets/img/epam.png" height="30px" alt="logo" /><strong>Shop</strong></a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                <form class="search-form navbar-right" role="search">
+                    <div class="form-group has-feedback">
+                        <label for="search" class="sr-only">Search</label>
+                        <input type="text" class="form-control" name="search" id="search" placeholder="Search"> <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                    </div>
+
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+
+<ul>
+  <li ng-repeat="product in products| filter : idfinal">
+  <p>{{ product.title }}</p>
+<img src="{{ product.img }}" class="details"/>
+ <p>{{ product.price }}</p>
+  <p>{{ product.Quantity }}</p>
+</li>
+</ul>
+
+
+<!-- /.container -->
+<div class="col-md-12 download-app-box text-center">
+    <!--
+    <span class="glyphicon glyphicon-download-alt"></span>Download Our Android App and Get 10% additional Off on all Products . <a href="#" class="btn btn-danger btn-lg">DOWNLOAD  NOW</a>
+--></div>
+<!--Footer -->
+<div class="col-md-12 footer-box">
+
+    <div class="row">
+        <div class="col-md-4"> <strong>Send a Quick Query </strong>
+            <hr>
+            <form>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" required="required" placeholder="Name"> </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" required="required" placeholder="Email address"> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <div class="form-group">
+                            <textarea name="message" id="message" required="required" class="form-control" rows="3" placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary"  data-toggle="modal" data-target=".bd-example-modal-sm">Submit Request</button>
+
+
+<!-- Small modal -->
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-sm">
+<div class="modal-content">
+  This feature will be added soon, Stay Tuned !
+</div>
+</div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-4"> <strong>Our Location</strong>
+            <hr>
+            <p> Plot #5, JVP Building,
+                <br /> Hyderabad, India
+                <br /> Call: +09-999-222-222
+                <br> Email: info@epamShop.com
+                <br> </p> 2017 www.epamShop.com | All Right Reserved </div>
+        <div class="col-md-4 social-box"> <strong>We are Social </strong>
+            <hr> <a href="https://www.facebook.com"><i class="fa fa-facebook-square fa-3x "></i></a> <a href="https://www.twitter.com"><i class="fa fa-twitter-square fa-3x "></i></a> <a href="https://plus.google.com"><i class="fa fa-google-plus-square fa-3x c"></i></a> <a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square fa-3x "></i></a> <a href="https://in.pinterest.com"><i class="fa fa-pinterest-square fa-3x "></i></a>
+            <!--                <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere. Curabitur nec nisl odio. Mauris vehicula at nunc id posuere.
+            </p>-->
+        </div>
+    </div>
+    <hr> </div>
+    <div class="col-md-12 end-box "> &copy; 2017 | &nbsp; All Rights Reserved | &nbsp; www.epamShop.com | &nbsp; 24x7 support | &nbsp; Email us: info@epamShop.com </div>
+    <!-- /.col -->
+    <!--Footer end -->
+    <!--Core JavaScript file  -->
+<!--    <script src="/assets/js/jquery-1.10.2.js"></script>
+    <!--bootstrap JavaScript file  -->
+  <!--  <script src="/assets/js/bootstrap.js"></script>
+    <!--Slider JavaScript file  -->
+    <!--<script src="/assets/ItemSlider/js/modernizr.custom.63321.js"></script>
+    <script src="/assets/ItemSlider/js/jquery.catslider.js"></script>-->
+    <script>
+        $(function () {
+            $('#mi-slider').catslider();
+        });
+    </script>

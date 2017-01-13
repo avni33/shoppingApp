@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+
+<head>
+
+
+
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="/css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="/css/icomoon.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="/css/bootstrap.css">
+
+  <!-- Flexslider  -->
+  <link rel="stylesheet" href="/css/flexslider.css">
+
+  <!-- Owl Carousel  -->
+  <link rel="stylesheet" href="/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+
+  <!-- Theme style  -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/sweetalert.min.css">
+  <!-- FOR IE9 below -->
+  <!--[if lt IE 9]>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-resource.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.5.0/angular-local-storage.min.js"></script>
+
+<!-- JavaScript includes -->
+
+
+  <script>
+    angular.module('app', ['ngRoute', 'ngResource', 'LocalStorageModule'])
+
+      //---------------
+      // Services
+      //---------------
+
+      .factory('Products', ['$resource', function($resource){
+        return $resource('/products/:id', null, {
+          'update': { method:'PUT' }
+        });
+      }])
+
+      //---------------
+      // Controllers
+      //---------------
+
+      .controller('ProductController', ['$rootScope', '$scope', 'localStorageService',
+      'Products','$routeParams', function ($rootScope, $scope, localStorageService, Products,$routeParams) {
+        $rootScope.showAutoSlider = true;
+        $rootScope.showSearch = true;
+
+        // console.log($scope.sliderShow);
+        $scope.printName = "This is me testing!";
+        $scope.editing = [];
+        $scope.products = Products.query();
+        $scope.random = function(max, min) {
+         return Math.round(Math.random() * (max - min) + min);
+       }
+       var total;
+       $scope.productsQuantity = function() {
+         $scope.count = 0;
+         angular.forEach($scope.products, function(val, key)
+         {
+            $scope.count = $scope.count + val.Quantity;
+
+          });
+          return $scope.count;
+       }
+
+
+
+      //  $rootScope.noOfProducts=0;
+       $scope.addToCart = function(myProduct){
+         $rootScope.noOfProducts;
+               var product = myProduct;
+               var productListNew =[];
+               productListNew = localStorageService.get('productListNew')|| [];
+                 $scope.exists = false;
+                 angular.forEach(productListNew, function(val, key)
+                 {
+                    if(angular.equals(product._id, val._id))
+                      {
+                        $scope.exists = true
+                      };
+                  });
+                 if($scope.exists == false && product.id != "") {
+                     productListNew.push(product);
+                     $rootScope.noOfProducts = ($rootScope.noOfProducts)+1;
+                     localStorageService.set('total', localStorageService.get('total')+product.price);
+                     localStorageService.set('productListNew', productListNew);
+         swal("Success", "The item has been added to the cart!", "success");
+                    }
+                    else{
+                    sweetAlert("", "The item is already there in the cart!", "error");
+                    }
+
+       };
+        $scope.category = "main";
+        $scope.contentUpdate = function(category) {
+        $scope.category = category;
+        }
+      }])
+
+      .controller('ViewController', ['$rootScope','localStorageService', '$scope',
+       'Products','$routeParams', function ($rootScope, localStorageService, $scope, Products,$routeParams) {
+    //    localStorageService.set('productList', false);
+$rootScope.showAutoSlider = false;
+$rootScope.showSearch = true;
+
+        $scope.editing = [];
+        $scope.category = $routeParams.category;
+        $rootScope.searchText = $routeParams.searchText;
+        // console.log($rootScope.searchText);
+        $scope.products = Products.query();
+        $rootScope.noOfProducts;
+        $scope.addToCart = function(myProduct){
+                var product = myProduct;
+                var productListNew =[];
+                productListNew = localStorageService.get('productListNew')|| [];
+                  $scope.exists = false;
+                  angular.forEach(productListNew, function(val, key) {
+        if(angular.equals(product._id, val._id)){ $scope.exists = true };
+      });
+                  if($scope.exists == false && product.id != "") {
+                      productListNew.push(product);
+                      $rootScope.noOfProducts = ($rootScope.noOfProducts)+1;
+                      localStorageService.set('total', localStorageService.get('total')+product.price);
+                      localStorageService.set('productListNew', productListNew);
+                      swal("Success", "The item has been added to the cart!", "success");
+                                 }
+                                 else{
+                                 sweetAlert("", "The item is already there in the cart!", "error");
+                                 }
+                                 };
+      }])
+
+      .controller('ProductDetailController', ['$rootScope','$scope', 'localStorageService',
+      'Products','$routeParams', function ($rootScope, $scope, localStorageService, Products,$routeParams) {
+$rootScope.showAutoSlider = false;
+$rootScope.showSearch = false;
+        $scope.editing = [];
+        $scope.id = $routeParams.id;
+        $scope.products = Products.query();
+        $rootScope.noOfProducts;
+        $scope.addToCart = function(myProduct){
+                var product = myProduct;
+                var productListNew =[];
+                productListNew = localStorageService.get('productListNew')|| [];
+                  $scope.exists = false;
+                  angular.forEach(productListNew, function(val, key) {
+        if(angular.equals(product._id, val._id)){ $scope.exists = true };
+      });
+                  if($scope.exists == false && product.id != "") {
+                      productListNew.push(product);
+                      $rootScope.noOfProducts = ($rootScope.noOfProducts)+1;
+                      localStorageService.set('total', localStorageService.get('total')+product.price);
+                      localStorageService.set('productListNew', productListNew);
+                      swal("Success", "The item has been added to the cart!", "success");
+                                 }
+                                 else{
+                                 sweetAlert("", "The item is already there in the cart!", "error");
+                                 }
+        };
+        $scope.buyNow = function(myProduct){
+                var product = myProduct;
+                var productListNew =[];
+                productListNew = localStorageService.get('productListNew')|| [];
+                  $scope.exists = false;
+                  angular.forEach(productListNew, function(val, key) {
+        if(angular.equals(product._id, val._id)){ $scope.exists = true };
+      });
+                  if($scope.exists == false && product.id != "") {
+                      productListNew.push(product);
+                      $rootScope.noOfProducts = ($rootScope.noOfProducts)+1;
+                      localStorageService.set('total', localStorageService.get('total')+product.price);
+                      localStorageService.set('productListNew', productListNew);
+                                 }
+
+        };
+      }])
+
+      .controller('CartDetailCtrl', ['$rootScope','$scope', 'Products', '$routeParams' ,'localStorageService',function (
+        $rootScope, $scope, Products,$routeParams,localStorageService) {
+       $scope.productListNew = localStorageService.get('productListNew');
+       $rootScope.showAutoSlider = false;
+        $rootScope.showSearch = false;
+        $rootScope.noOfProducts;
+       $scope.total = localStorageService.get('total');
+       $scope.remove = function(product){
+          angular.forEach($scope.productListNew, function(val, key) {
+   if(angular.equals(product._id, val._id)){
+              var index=$scope.productListNew.indexOf(val)
+              $scope.productListNew.splice(index,1);
+              $rootScope.noOfProducts = ($rootScope.noOfProducts)-1;
+              localStorageService.set('total', localStorageService.get('total')-product.price);
+         localStorageService.set('productListNew', $scope.productListNew);
+         $scope.total = localStorageService.get('total');
+
+         };
+       });
+       };
+
+// Testing Quantity
+$scope.sizes = [];
+
+   $scope.change = function(input){
+     debugger;
+// console.log($scope.sizes);
+       var count = $scope.sizes.length,
+           valid = 0;
+console.log(count);
+       $scope.sizes.forEach(function(value){
+           if (value){
+                valid++;
+           }
+       });
+       if (count>=0){
+           $scope.sizes.push(input); // This should just add an empty input
+                                  // For some reason it copies the last typed input
+           // If you change this to .push(null),
+           // it will work for the first change(), but not thereafter
+       }
+
+       $scope.debug = JSON.parse(JSON.stringify($scope.sizes));
+       console.log($scope.debug);
+   }
+     }])
+
+     .controller('BillCtrl', ['$rootScope','$scope', 'localStorageService',
+     'Products','$routeParams', function ($rootScope, $scope, localStorageService, Products,$routeParams) {
+
+       $scope.total = localStorageService.get('total');
+       $scope.productListNew = localStorageService.get('productListNew');
+
+
+     }])
+
+
+
+
+      .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider
+          .when('/', {
+            templateUrl: '/index1.html',
+            controller: 'ProductController'
+          })
+           .when('/products/:category', {
+             templateUrl: '/product.html',
+             controller: 'ViewController'
+           })
+           .when('/productDetail/:id', {
+             templateUrl: '/single.html',
+             controller: 'ProductDetailController'
+           })
+           .when('/cartDetails', {
+             templateUrl: '/cart.html',
+             controller: 'CartDetailCtrl'
+           })
+           .when('/billGeneration', {
+             templateUrl: '/newBillTest.html',
+             controller: 'BillCtrl'
+           });
+          // .when('/bill_view/:id', {
+          //   templateUrl: '/bill.html',
+          //   controller: 'BillController'
+          // });
+      }]);
+
+
+    //   .controller('BillController', ['$scope', 'Products','$routeParams', function ($scope, Products,$routeParams) {
+    //     $scope.editing = [];
+    //     $scope.idfinal = $routeParams.id;
+    //     $scope.products = Products.query();
+    //       console.log($scope.idfinal);
+    //     $scope.category = "Electronics";
+    //     $scope.contentUpdate = function(category) {
+    //       console.log("This is testing application !");
+    //       $scope.category = category;
+    //       console.log($scope.category);
+    //     };
+    //   }])
+
+      //---------------
+      // Routes
+      //---------------
+
+
+
+  </script>
+</head>
+
+<body>
+  <!-- <script>
+  function test(){
+    var test = "this is content !";
+    alert(test);
+    }
+  </script>
+  <button onClick="test()">TestAlert</button> -->
+  <nav class="fh5co-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-2">
+					<div id="fh5co-logo"><a href="/"><img src="/images/logo.png" class="logoImage">&nbspShop</a></div>
+				</div>
+				<div class="col-md-6 col-xs-6 text-center menu-1">
+					<ul>
+						<li class="has-dropdown">
+							<a>Product category</a>
+							<ul class="dropdown">
+								<li><a href="#/products/Electronics">Electronics</a></li>
+								<li><a href="#/products/Books">Books</a></li>
+								<li><a href="#/products/Home & Decor">Home&Decor</a></li>
+								<li><a href="#/products/Clothing">Clothing</a></li>
+							</ul>
+						</li>
+						<li><a href="about.html">About</a></li>
+
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3 col-xs-4 text-right hidden-xs menu-2">
+					<ul>
+						<li ng-show="showSearch" class="search">
+							<div class="input-group">
+						      <input type="text" placeholder="Search.." ng-model="searchText">
+
+						      <span class="input-group-btn">
+						  <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
+						      </span>
+						    </div>
+						</li>
+						<li class="shopping-cart">
+							<a href="#/cartDetails" class="cart">
+								<span><!--<small>{{noOfProducts}}</small>-->
+                  <i class="icon-shopping-cart"></i>
+                </span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+
+
+  <aside ng-show="showAutoSlider" id="fh5co-hero" class="js-fullheight">
+    <div class="flexslider js-fullheight">
+      <ul class="slides">
+        <li style="background-image: url(/images/main/1.jpg); opacity: 0.6;">
+          <div class="overlay-gradient"></div>
+          <div class="container">
+            <div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
+              <div class="slider-text-inner">
+                <div class="desc">
+                  <span class="price"></span>
+                  <h2>Books & Novels</h2>
+                  <p>"Always read something that will make you look good if you die in the middle of it."
+<br/>
+<b>–P.J. O’Rourke</b></p>
+                  <p><a href="#/products/Books" class="btn btn-primary btn-outline btn-lg">Know More</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li style="background-image: url(/images/main/2.jpg);">
+          <div class="container">
+            <div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
+              <div class="slider-text-inner">
+                <div class="desc">
+                  <span class="price"></span>
+                  <h2>Clothing & Fashion</h2>
+                  <p>“Style is a way to say who you are without having to speak.”<br/> <b>— Rachel Zoe</b></p>
+                  <p><a href="#/products/Clothing" class="btn btn-primary btn-outline btn-lg">Know More</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li style="background-image: url(/images/main/3.jpg);">
+          <div class="container">
+            <div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
+              <div class="slider-text-inner">
+                <div class="desc">
+                  <span class="price"></span>
+                  <h2>Electronics & Appliances</h2>
+                  <p>"Any sufficiently advanced technology is equivalent to magic."
+<br/>
+<b>– Sir Arthur C. Clarke</b></p>
+                  <p><a href="#/products/Electronics" class="btn btn-primary btn-outline btn-lg">Know More</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li style="background-image: url(/images/main/4.jpg);">
+          <div class="container">
+            <div class="col-md-6 col-md-offset-3 col-md-pull-3 js-fullheight slider-text">
+              <div class="slider-text-inner">
+                <div class="desc">
+                  <span class="price"></span>
+                  <h2>Home & Decor</h2>
+                  <p>Decorate Your Home <br/> Wall Decor | Clocks | Lights</p>
+                  <p><a href="#/products/Home & Decor" class="btn btn-primary btn-outline btn-lg">Know More</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        </ul>
+      </div>
+      <h1>{{printTest}}</h1>
+  </aside>
+
+
+
+
+<ng-view></ng-view>
+<footer id="fh5co-footer" role="contentinfo">
+  <div class="container">
+    <div class="row row-pb-md">
+      <div class="col-md-4 fh5co-widget">
+        <h3>Epam Shop</h3>
+        <p> India’s Ultimate Online Shopping Destination EpamShop’s vision is to
+           create India’s most reliable and frictionless commerce ecosystem that
+            creates life-changing experiences for buyers and sellers.</p>
+      </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+        <ul class="fh5co-footer-links">
+          <br/><br/>
+          <li><b><a href="about.html">About</a></b></li>
+
+        </ul>
+      </div>
+
+      <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+        <ul class="fh5co-footer-links">
+            <br/><br/>
+          <li><b><a href="contact.html">Contact</a></b></li>
+
+        </ul>
+      </div>
+
+      <div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+        <ul class="fh5co-footer-links">
+        <br/><br/>
+          <li><b><a>Terms</a></b></li>
+
+        </ul>
+      </div>
+    </div>
+
+    <div class="row copyright">
+      <div class="col-md-12 text-center">
+        <p>
+          <small class="block">&copy; 2016 EpamShop. All Rights Reserved.</small>
+        </p>
+        <p>
+          <ul class="fh5co-social-icons">
+            <li><a href="http://www.twitter.com" target="_blank"><i class="icon-twitter"></i></a></li>
+            <li><a href="http://www.facebook.com" target="_blank"><i class="icon-facebook"></i></a></li>
+            <li><a href="https://in.linkedin.com/" target="_blank"><i class="icon-linkedin"></i></a></li>
+          </ul>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+<script src="/js/jquery.min.js"></script>
+<!-- jQuery Easing -->
+<script src="/js/jquery.easing.1.3.js"></script>
+<!-- Bootstrap -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- Waypoints -->
+<script src="/js/jquery.waypoints.min.js"></script>
+<!-- Carousel -->
+<script src="/js/owl.carousel.min.js"></script>
+<!-- countTo -->
+<script src="/js/jquery.countTo.js"></script>
+<!-- Flexslider -->
+<script src="/js/jquery.flexslider-min.js"></script>
+<!-- Main -->
+<script src="/js/main.js"></script>
+
+<script src="/js/sweetalert.min.js"></script>
+</body>
+
+</html>

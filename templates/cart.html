@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cart</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/custom.css"/>
+	</head>
+
+	<body ng-controller="CartDetailController">
+
+<!--		<nav class="navbar">
+			<div class="container">
+				<a class="navbar-brand" href="#">Your online store</a>
+				<div class="navbar-right">
+					<div class="container minicart"></div>
+				</div>
+			</div>
+		</nav>  -->
+
+		<div class="container-fluid breadcrumbBox text-center">
+			<ol class="breadcrumb">
+				<li><a href="#">Review</a></li>
+				<li class="active"><a href="#">Order</a></li>
+				<li><a href="#">Payment</a></li>
+			</ol>
+		</div>
+
+		<div class="container text-center">
+
+			<div class="col-md-5 col-sm-12">
+				<div class="bigcart"></div>
+				<h1>Your shopping cart</h1>
+
+			</div>
+
+			<div class="col-md-7 col-sm-12 text-left">
+				<ul>
+					<li class="row list-inline columnCaptions">
+						<span>Quantity</span>
+						<span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspITEM</span>
+						<span>Price</span>
+					</li>
+					<li class="row" ng-repeat = "product in productListNew">
+						<!-- <span class="quantity">
+
+							<select ng-model="product[$index]" ng-change='change(product[$index])' value=1>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+
+					</span> -->
+
+						<span class="itemName">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{product.title}}</span>
+
+						<span class="popbtn"><a class="glyphicon glyphicon-remove" ng-click="remove(product)"></a></span>
+						<span class="price">Rs {{product.price}}</span>
+					</li>
+					<li ng-if="total==0" class="row">
+						<img src="images/emptycart.gif">
+					</li>
+
+					<li class="row totals">
+						<span class="itemName">Total:</span>
+						<span class="price">Rs. {{total}}</span>
+						<span class="order"> <!--<a href="address.html" class="text-center">ORDER</a>-->
+								<a href="/" class="btn btn-default">Continue Shopping</a>
+							<a href="#/billGeneration" class="btn btn-default" ng-click=qt()  ng-if="total!=0">Place Order</a>
+							<!-- <a data-toggle="modal" data-target="#billConfifirm" class="text-center">ORDER</a> -->
+
+						</span>
+					</li>
+				</ul>
+			</div>
+
+
+			<div class="modal fade" id="billConfifirm" role="dialog">
+		    <div class="modal-dialog">
+
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Order Confirmation</h4>
+		        </div>
+		        <div class="modal-body">
+		          <p>Are you sure, you want to place this order.</p>
+		        </div>
+		        <div class="modal-footer">
+							<a href="#/billGeneration" class="btn btn-default">Place Order</a>
+		        <!--  <button type="button" class="btn btn-default" data-dismiss="modal">Changed my mind</button>-->
+
+		        </div>
+		      </div>
+
+		    </div>
+		  </div>
+
+		</div>
+
+		<!-- The popover content -->
+
+		<div id="popover" style="display: none">
+			<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+		</div>
+
+	</body>
+</html>

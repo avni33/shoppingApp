@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Shop &mdash; </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<!-- Facebook and Twitter integration -->
+
+	</head>
+	<body>
+
+
+	<div id="page">
+
+
+<!--	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/img_bg_2.jpg);">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Product Details</h1>
+							<h2></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>-->
+
+	<div id="fh5co-product">
+		<div class="container" ng-repeat = "product in products | filter : id">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 animate-box">
+					<div class="owl-carousel owl-carousel-fullwidth product-carousel">
+						<div class="item">
+							<div class="active text-center">
+								<figure>
+									<img class="detailImage" src="{{product.img}}" alt="user">
+								</figure>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="fh5co-tabs animate-box">
+						<ul class="fh5co-tab-nav">
+							<li class="active">
+								<a>
+									<span class="icon visible-xs"><i class="icon-file"></i></span>
+									<span class="hidden-xs">Product Details</span>
+								</a>
+							</li>
+							<!--<li><a href="" data-tab="2"><span class="icon visible-xs"><i class="icon-bar-graph"></i></span><span class="hidden-xs">Product Details</span></a></li>-->
+							<!--<li><a href="#" data-tab="3"><span class="icon visible-xs"><i class="icon-star"></i></span><span class="hidden-xs">Feedback &amp; Ratings</span></a></li>-->
+						</ul>
+
+						<!-- Tabs -->
+						<div class="fh5co-tab-content-wrap section-top" style="height:300px !important">
+							<div class="fh5co-tab-content tab-content active" data-tab-content="1">
+								<div class="col-md-10 col-md-offset-1">
+									<span class="price">Price: Rs {{product.price}}</span>
+									<h2>{{product.title}}</h2>
+									<p>{{product.description}}</p>
+									<div class="row">
+										<div class="col-md-10 col-md-offset-4 animate-box">
+									<p>
+										<a class="btn btn-primary btn-outline btn-lg" ng-click="addToCart(product)">Add to Cart</a>
+										<a href="#/billGeneration" class="btn btn-primary btn-outline btn-lg" ng-click="buyNow(product)">Buy Now</a>
+									</p>
+								</div>
+								</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+
+	</div>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	</body>
+</html>
