@@ -80,6 +80,8 @@
 
       //  $rootScope.noOfProducts=0;
        $scope.addToCart = function(myProduct){
+         myProduct.itemquant = 1;
+
          $rootScope.noOfProducts;
                var product = myProduct;
                var productListNew =[];
@@ -123,6 +125,8 @@ $rootScope.showSearch = true;
         $scope.products = Products.query();
         $rootScope.noOfProducts;
         $scope.addToCart = function(myProduct){
+          myProduct.itemquant = 1;
+
                 var product = myProduct;
                 var productListNew =[];
                 productListNew = localStorageService.get('productListNew')|| [];
@@ -152,6 +156,8 @@ $rootScope.showSearch = false;
         $scope.products = Products.query();
         $rootScope.noOfProducts;
         $scope.addToCart = function(myProduct){
+          myProduct.itemquant = 1;
+
                 var product = myProduct;
                 var productListNew =[];
                 productListNew = localStorageService.get('productListNew')|| [];
@@ -265,15 +271,15 @@ console.log(count);
  .controller('CatalogueController', ['$scope', 'Products', '$routeParams','localStorageService',function ($scope, Products, $routeParams,localStorageService) {
                 debugger;
          console.log("Test ctrl");
-                $scope.products = []; 
+                $scope.products = [];
                 $scope.products_insert= function(){
                     alert(JSON.stringify($scope.products));
                     Products.save($scope.products,function(val, key){
-                        
+
                         //do something here
-                    });   
+                    });
                 };
-        }]) 
+        }])
 
 
       .config(['$routeProvider', function ($routeProvider) {
